@@ -1,0 +1,42 @@
+/* Box Modal */
+
+
+h2{
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: red; */
+    
+    /* border:2px solid red; */
+
+    /* border: 1px solid red;
+    border: 1px dashed red;
+    border: 1px dotted red; */
+
+    border: 1px solid red;
+
+    font-weight: lighter;
+
+
+
+    /* height: 40px; */
+
+
+    
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;
+
+
+
+    padding: 10px 40px 5px 2px;
+    margin-left: 20px;
+
+    color: white;
+
+}
+
+
+/* button{
+    width: 150px;
+    height: 50px;
+} */
