@@ -1,0 +1,41 @@
+.con{
+    border:1px solid red;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    /* row-gap: 20px; */
+    /* column-gap: 10px; */
+    /* gap: 10px 20px; */
+    gap: 10px;
+}
+
+
+.child{
+    border: 1px solid green;
+    padding: 10px;
+}
+
+.child1{
+    background-color: rgb(164, 250, 164);
+    /* grid-column-start:1;
+    grid-column-end:3;
+
+
+    grid-row-start:1;
+    grid-row-end:6; */
+
+    grid-area:1/1/2/3;
+}
+
+.child6{
+    grid-area: 3/1/4/4;
+    background-color: rgb(162, 162, 245);
+}
+
+/* .child1{
+    float: right;
+}
+
+.child2{
+    float: left;
+} */
+
