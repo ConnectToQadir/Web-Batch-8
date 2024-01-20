@@ -1,0 +1,69 @@
+.container{
+    border: 2px solid red;
+}
+
+
+.box{
+    width: 100px;
+    height: 100px;
+}
+
+.box:nth-child(1){
+    background: red;
+    width: 100%;
+
+    /* position: fixed; */
+
+    /* top:0; */
+    /* left:50%; */
+
+    /* transform: translate(-50%,-50%); */
+
+    /* right: ; */
+    /* bottom: 10px; */
+}
+
+
+
+.cardBox{
+    border: 3px solid green;
+    width: 50%;
+    margin: 50px auto;
+
+    position: relative;
+}
+
+.cardBox img{
+    width: 100%;
+}
+
+.card{
+    border: 1px solid red;
+    width: 30px;
+    height: 30px;
+    /* position: static;
+    position: sticky;
+    position: fixed;
+    position: absolute;
+    position: relative; */
+
+    top: 100px;
+    left: 100px;
+    background-color: orange;
+
+    border-radius: 50%;
+
+
+
+
+}
+
+
+.box:nth-child(2){
+    background: green;
+}
+
+
+.box:nth-child(3){
+    background: blue;
+}
