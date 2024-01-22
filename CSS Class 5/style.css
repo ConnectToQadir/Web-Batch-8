@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    /* background-color: #0050; */
+    /* background-color: rgba(0,0,255,50%); */
+    /* background-color: hsl(20, 20, 20); */
+
+    background-image: url(https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705881600&semt=sph);
+    background-size: cover;
+    background-position: top left;
+
+    /* background: linear-gradient(red 90%,blue); */
+    /* background: radial-gradient(red,blue); */
+
+}
+
+/* .innerBox{
+    background-color: rgba(0, 0, 0, 20%);
+    height: 100%;
+    transition:all .5s ;
+}
+
+
+.innerBox:hover{
+    color: white;
+    font-size: 40px;
+} */
+
+
+.progessbar{
+    width: 60%;
+    height: 20px;
+    background-color: lightgray;
+    margin: 40px auto;
+    padding: 3px;
+}
+.bar{
+    background-color: green;
+    height: 50%;
+    width: 0;
+    /* transition:width 20s,height 20s; */
+    /* transition:10s; */
+}
+
+.progessbar:hover .bar{
+    width: 100%;
+    background-color: red;
+    height: 100%;
+}
+
+
+
+
+.scrollTopBtn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: red;
+}
