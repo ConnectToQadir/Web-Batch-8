@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 20px;
+}
+
+img{
+    width: 100%;
+}
+
+
+
+header{
+    background-color: #eee;
+    position: sticky;
+    top: 0;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+header nav img{
+    width: 120px;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+
+}
+
+header nav ul li a:hover{
+    color:red;
+}
+
+header .menu{
+    display: none;
+}
+
+
+.hero{
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: .4fr .6fr;
+    gap: 30px;
+}
+
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+}
+
+
+.cards div{
+    overflow: hidden;
+}
+
+.cards div img{
+    transition: .5s;
+}
+
+.cards div img:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+@media (max-width:992px) {
+    .cards{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .cards{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .hero{
+        grid-template-columns: 1fr;
+    }
+
+    .hero div:nth-child(1){
+        order: 2;
+    }
+
+    .hero div:nth-child(2){
+        order: 1;
+    }
+
+    header nav ul{
+        display: none;
+    }
+
+
+    header .menu{
+        display: block;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:650px) {
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:550px) {
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
