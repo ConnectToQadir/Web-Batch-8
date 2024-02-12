@@ -63,7 +63,7 @@
 // var obj = {
 //     name:"Ali",
 //     fatherName:"Shabbir",
-//     age:23,1:"24",
+//     age:24,
 //     sum:(a,b)=>{
 //         return a+b
 //     }
