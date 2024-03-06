@@ -1,16 +1,10 @@
 const mongoose = require("mongoose")
 
-
-// Schema (Table Structure)
-var productSchema = new mongoose.Schema({
+const productsSchema = new mongoose.Schema({
     title:String,
     price:Number,
     stock:Number
-})
+},{timestamps:true})
 
 
-// collection -> model
-const ProductsModel = mongoose.model("products",productSchema)
-
-
-module.exports = ProductsModel
+module.exports = mongoose.model("products",productsSchema)

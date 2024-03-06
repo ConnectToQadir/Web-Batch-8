@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>These are produsts</h1>
+    <a href="/products/new">New Product</a>
+
+
+    <div id="products">
+    </div>
+
+
+    <script>
+
+        var productsDiv = document.getElementById("products")
+
+        async function DeleteProduct(id){
+            if(confirm("Are are you sure to Delete this product?")){
+                var res = await fetch(`/products/delete?id=${id}`)
+                res = await res.json()
+                alert(res.message)
+                fetchProduct()
+            }
+        }
+
+        async function fetchProduct(){
+            var p = await fetch("/products/api")
+            p = await p.json()
+            
+            productsDiv.innerHTML = ""
+
+            p.map((v,i)=>{
+                var singleProduct = document.createElement("div")
+
+                var title = document.createElement("h2")
+                title.innerText = v.title
+
+
+                var price = document.createElement("div")
+                price.innerText = "Price : " + v.price
+
+                var stock = document.createElement("div")
+                stock.innerText = "Stock : " + v.stock
+
+                var delBtn = document.createElement("button")
+                delBtn.innerText = "Delete"
+                delBtn.addEventListener("click",()=>{
+                    DeleteProduct(v._id)
+                })
+
+
+                singleProduct.appendChild(title)
+                singleProduct.appendChild(price)
+                singleProduct.appendChild(stock)
+                singleProduct.appendChild(delBtn)
+
+                productsDiv.appendChild(singleProduct)
+
+            })
+
+        }
+
+        fetchProduct()
+    </script>
+
+</body>
+</html>
